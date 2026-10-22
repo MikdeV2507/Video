@@ -1,6 +1,7 @@
 # Strategie & plan — Videoserie "Whitespace inrichten in het datacenter"
 
-> Status: **v0.2** — besluiten verwerkt (zie §0). Stijlgids: `huisstijl/STIJLGIDS.md`. Pilot: `curriculum/1.2-rows-and-aisles.md`.
+> Status: **v0.3** — besluiten verwerkt (zie §0). Stijlgids: `huisstijl/STIJLGIDS.md`. Pilot: `curriculum/1.2-rows-and-aisles.md`.
+> Pilot-animatie v0.1 (zonder voice-over) gebouwd in `animatie/` — zie `animatie/README.md`.
 
 ---
 
