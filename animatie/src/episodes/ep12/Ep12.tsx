@@ -138,7 +138,7 @@ const Hall: React.FC = () => {
     <Bg>
       <World items={items} />
       <Tag cam={cam} at={[7.8, 9.6, 0]} text="600 × 600 mm grid" mono size={34} color={C.navy} opacity={fadeWin(t, 2.5, 7.5)} />
-      <Tag cam={cam} at={[0.55, 1.9, 2.2]} text="CRAH" mono size={30} color={C.muted} opacity={fadeWin(t, 4, 10)} />
+      <Tag cam={cam} at={[0.55, 1.9, 2.2]} text="CRAH" mono size={30} color={C.muted} opacity={fadeWin(t, 3.5, 7.5)} />
       <Tag cam={cam} at={[4.8, 1.8, 2.5]} text="Row A" size={36} opacity={fadeWin(t, 11, 16.6)} />
       <Locator label="Rows and aisles" opacity={ramp(t, 2, 3)} />
     </Bg>
@@ -161,7 +161,7 @@ const Airflow: React.FC = () => {
       <World items={items} />
       <Tag cam={cam} at={[xc, 3.6, 1.95]} text="FRONT · cool air in" color={C.cold} size={38} opacity={fadeWin(t, 5, 17.6)} />
       <Tag cam={cam} at={[xc, 0.3, 1.95]} text="BACK · hot air out" color={C.hot} size={38} opacity={fadeWin(t, 7, 17.6)} />
-      <Tag cam={cam} at={[xc, 1.9, 2.75]} text="front-to-back airflow" mono size={32} opacity={fadeWin(t, 10, 17.6)} />
+      <Tag cam={cam} at={[xc, 1.9, 0]} text="front-to-back airflow" mono size={32} dy={70} opacity={fadeWin(t, 10, 17.6)} />
       <Locator label="Rows and aisles" opacity={1} highlight={{x: rackX(focusRack), y: 1.2, w: 0.6, h: 1.2}} />
     </Bg>
   );
