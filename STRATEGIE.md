@@ -1,6 +1,21 @@
 # Strategie & plan — Videoserie "Whitespace inrichten in het datacenter"
 
-> Status: **concept v0.1** — om samen verder aan te scherpen. Open vragen staan onderaan.
+> Status: **v0.2** — besluiten verwerkt (zie §0). Stijlgids: `huisstijl/STIJLGIDS.md`. Pilot: `curriculum/1.2-rows-and-aisles.md`.
+
+---
+
+## 0. Genomen besluiten
+
+| Onderwerp | Besluit |
+|---|---|
+| Huisstijl | **HETS** (Archivo + IBM Plex Mono, donkerblauw `#16202B`, oranje `#E07B0A`, teal `#1FA9A3`) |
+| Taal | **Alleen Engels** — voice-over, tekst in beeld, ondertitels, YouTube-teksten |
+| Scope | **Hele whitespace even breed** (modules 0–7) |
+| Voice-over | **Professionele stem** (native/near-native Engels) |
+| Distributie | **YouTube** — playlist per module |
+| Normen | De gangbare branchestandaarden: EN 50600, ISO/IEC 11801-5 & 14763-2, TIA-942, TIA-568, TIA-606, BICSI 002, ASHRAE TC9.9 |
+| Pilot | **1.2 Rows and aisles** |
+| Productieroute | **Advies: hybride, code-gebaseerde pilot eerst** (zie §7) — besluit na de pilot |
 
 ---
 
@@ -18,7 +33,8 @@ engineers, DC-operators en accountmanagers.
 - Geen basisuitleg van "wat is een server"; vakjargon (U, PDU, MDA, CAC, 2N) mag, maar wordt
   bij eerste gebruik kort gedefinieerd in beeld.
 - Focus op het **waarom** achter keuzes (principes) en het **hoe** (werkwijze, volgorde, controlepunten).
-- Verwijzen naar normen (EN 50600, ISO/IEC 11801-5, TIA-942, TIA-606, ASHRAE TC9.9) zonder normteksten voor te lezen.
+- Verwijzen naar normen (EN 50600, ISO/IEC 11801-5, TIA-942, TIA-606, BICSI 002, ASHRAE TC9.9) zonder normteksten voor te lezen.
+  Omdat de serie Engelstalig is, noemen we waar ze verschillen zowel de Europese (EN/ISO) als de Amerikaanse (TIA) term.
 - Praktijkvoorbeelden en veelgemaakte fouten ("zo niet / zo wel") boven theorie.
 
 **Leerresultaat na de hele serie:** de kijker kan een whitespace-indeling lezen, beoordelen
@@ -130,12 +146,14 @@ Indeling in **seizoenen/modules**, zodat je met module 1–2 al live kunt gaan.
   goedkoper te produceren en te wijzigen dan 3D of filmopnames, en blijft lang actueel.
 - **Vaste kleurcodes (overal hetzelfde):**
   - Koude lucht **blauw**, warme lucht **rood/oranje**
-  - Voeding **A = rood/oranje-tint, B = blauw-tint** (of conform klantstandaard)
-  - Glas **aqua/geel**, koper **grijs/blauw**, aarding **groen-geel**
+  - Voeding / routes **A-zijde = rood, B-zijde = groen** (gelijk aan HETS-goottekeningen)
+  - Multimode glas **aqua**, singlemode **geel**, UTP **paars**, aarding **groen-geel**
+  - Fibergoot **geel**, draadgoot (Cablofil) **grijs**
   - "Zo niet" = rood kruis, "zo wel" = groen vinkje
 - **Iconenset & bibliotheek:** één set herbruikbare assets (rack, tegel, CRAH, busbar, kabelgoot, patchpaneel, mens voor schaal).
 - **Typografie:** één schreefloos font, minimaal **5 % van de beeldhoogte** voor tekst in beeld (leesbaar op telefoon).
-- **Voice-over:** rustige, zakelijke Nederlandse stem; optioneel Engelse versie.
+- **Voice-over:** professionele Engelse stem, rustig en zakelijk (~140 woorden/minuut).
+- Volledige uitwerking: `huisstijl/STIJLGIDS.md`.
 
 ---
 
@@ -145,11 +163,14 @@ Indeling in **seizoenen/modules**, zodat je met module 1–2 al live kunt gaan.
 |---|---|
 | **Beeldverhouding** | Master in **16:9 (1920×1080)**. Alle belangrijke inhoud binnen een *centrale safe zone*, zodat een **9:16 of 1:1**-uitsnede voor social/teasers mogelijk is. |
 | **Leesbaarheid** | Groot lettertype, weinig tekst, hoog contrast, geen fijne lijnen < 3 px. |
-| **Ondertiteling** | Altijd **ondertitels (NL, optioneel EN)** als losse `.vtt` — veel kijkers kijken zonder geluid op locatie. |
-| **Bestandsformaat** | MP4 (H.264/AAC), daarnaast adaptieve streaming (HLS) via het afspeelplatform zodat het ook op 4G goed loopt. |
-| **Afspeelomgeving** | Een eenvoudige **responsieve webpagina/portal** per module (werkt in elke browser, tablet en telefoon), of een bestaand LMS / Vimeo / YouTube (niet-openbaar). |
-| **Navigatie** | Hoofdstukmarkeringen per aflevering, zodat kijkers naar "zo wel / zo niet" of de checklist kunnen springen. |
-| **Naslag** | Per aflevering een **1-pagina PDF-kaart** (kernpunten + checklist) om op locatie te gebruiken. |
+| **Ondertiteling** | Altijd **Engelse ondertitels** als losse `.srt`/`.vtt` geüpload naar YouTube (niet automatisch gegenereerd — vaktermen gaan anders mis). |
+| **Bestandsformaat** | Upload MP4 (H.264, 1920×1080, 30 fps, AAC 48 kHz). YouTube zorgt zelf voor adaptieve streaming op pc, iPad en telefoon. |
+| **Afspeelomgeving** | **YouTube**: één kanaal, **playlist per module**, plus een playlist "Full series" in de juiste volgorde. |
+| **Navigatie** | **YouTube-hoofdstukken** via tijdcodes in de beschrijving (Intro, Problem, Principle, Don't/Do, Checklist, Recap). |
+| **Vindbaarheid** | Vaste titelvorm: `Data Centre Whitespace 1.2 — Rows and Aisles | HETS`; vaste thumbnail-template; beschrijving met kernpunten en normverwijzingen. |
+| **Shorts** | Per aflevering optioneel één **9:16 Short** (30–45 s, de "Don't / Do") als teaser met link naar de volledige video. |
+| **Eindscherm** | Laatste 10 s: eindscherm met "next episode" en de module-playlist. |
+| **Naslag** | Per aflevering een **1-pagina PDF-kaart** (kernpunten + checklist), te linken in de beschrijving. |
 
 ---
 
@@ -158,13 +179,13 @@ Indeling in **seizoenen/modules**, zodat je met module 1–2 al live kunt gaan.
 Per aflevering:
 
 1. **Inhoudsbrief** (½ A4) — leerdoel, 3 kernpunten, zo-niet/zo-wel, normverwijzing.
-2. **Script** — voice-overtekst met tijdscodes (~130 woorden per minuut).
+2. **Script (Engels)** — voice-overtekst met tijdscodes (~140 woorden per minuut).
 3. **Vakinhoudelijke review** — door een expert (bijv. projectleider/engineer).
 4. **Storyboard** — schetsen per scène op basis van de assetbibliotheek.
 5. **Animatie** — opbouwen met de vaste assets.
-6. **Voice-over & ondertitels**.
+6. **Voice-over (professionele stem) & Engelse ondertitels** — de stem wordt opgenomen vóór de definitieve animatie.
 7. **Review-ronde** (max. 2) op inhoud én leesbaarheid op een telefoon.
-8. **Publicatie** — MP4 + VTT + PDF-kaart op het platform.
+8. **Publicatie op YouTube** — MP4, ondertitels, hoofdstukken, thumbnail, eindscherm; PDF-kaart gelinkt.
 
 **Tooling — twee realistische routes:**
 
@@ -173,8 +194,23 @@ Per aflevering:
 | **A. Code-gebaseerde animatie** (bijv. *Remotion* of *Motion Canvas*) in deze repository | Veel afleveringen in dezelfde stijl, herbruikbare componenten (rack, rij, kabel), eenvoudig aan te passen en te versioneren. Ik kan hier direct in meebouwen. |
 | **B. Klassieke tools** (After Effects / Adobe Express / Vyond) | Als een vormgever of bureau de animatie maakt; deze repo bevat dan scripts, storyboards en de planning. |
 
-*Voorstel:* route A, omdat de serie sterk leunt op terugkerende technische objecten en één
-doorlopende demo-zaal — dat is precies waar componenten in code sterk in zijn.
+**Advies: hybride, met een code-gebaseerde pilot eerst.**
+
+| | Route A — code (Remotion) | Route B — vormgever |
+|---|---|---|
+| Consistentie over ~28 afleveringen | Zeer hoog: één rack-/rij-/kabelcomponent overal | Afhankelijk van discipline van de vormgever |
+| Wijzigen (nieuwe norm, ander getal) | Waarde aanpassen, opnieuw renderen | Nieuwe opdracht, nieuwe kosten |
+| Kosten per aflevering | Laag na de opbouw van de bibliotheek | Hoger, per aflevering |
+| Uitstraling / "beleving" | Strak, technisch, schematisch | Meer karakter en vloeiende beweging mogelijk |
+| Personages, camerabewegingen | Beperkt | Sterk |
+| Afhankelijkheid | Deze repository + ik als bouwer | Externe partij |
+
+Werkwijze:
+1. Deze repository is **altijd** de bron voor inhoud: inhoudsbriefs, Engelse scripts, storyboards en stijlgids. Die zijn bruikbaar voor beide routes.
+2. We maken **pilot 1.2 in code** (Remotion, React-gebaseerd, rendert naar MP4). Dat is snel en goedkoop en levert direct de herbruikbare objecten op.
+3. **Beslismoment na de pilot:** voldoet de uitstraling op YouTube (pc, iPad, telefoon)? Dan doorproduceren in code. Zo niet, dan gaan script + storyboard + stijlgids als compleet briefingpakket naar een vormgever — er is dan niets verloren.
+
+De professionele voice-over wordt in beide routes **na scriptgoedkeuring en vóór de definitieve animatie** opgenomen; de animatie wordt op de stem getimed.
 
 ---
 
@@ -183,7 +219,7 @@ doorlopende demo-zaal — dat is precies waar componenten in code sterk in zijn.
 | Fase | Inhoud | Resultaat |
 |---|---|---|
 | **1. Fundament** | Doelgroep, curriculum en huisstijl vastleggen; assetbibliotheek; demo-zaal ontwerpen | Goedgekeurde stijlgids + aflevering-template |
-| **2. Pilot** | Aflevering **1.2 "Rijen en gangpaden"** volledig produceren | Eén complete video + PDF-kaart, getest op telefoon/iPad/pc |
+| **2. Pilot** | Aflevering **1.2 "Rows and aisles"**: script laten reviewen, voice-over opnemen, animatie in code | Eén complete video + PDF-kaart, (privé) op YouTube getest op telefoon/iPad/pc; beslismoment productieroute |
 | **3. Evaluatie** | Pilot voorleggen aan 5–10 collega's/klanten uit de doelgroep | Bijgestelde template en tempo |
 | **4. Module 0–1** | Kader + ruimtelijke indeling | Eerste publiceerbare module |
 | **5. Doorproductie** | Modules 2–7, in ritme van bijv. 2 afleveringen per maand | Volledige serie |
@@ -204,13 +240,10 @@ doorlopende demo-zaal — dat is precies waar componenten in code sterk in zijn.
 
 ---
 
-## 10. Open vragen (om samen te beslissen)
+## 10. Open punten
 
-1. **Afzender en huisstijl:** wordt dit in de HETS-huisstijl gemaakt, of neutraal/white-label voor klanten?
-2. **Taal:** alleen Nederlands, of ook Engels (ondertiteld of ingesproken)?
-3. **Inhoudelijke scope:** ligt de nadruk op het complete whitespace-plaatje, of vooral op **bekabeling en precabling** (module 4) met de rest als context?
-4. **Productieroute:** code-gebaseerd in deze repo (route A) of via een vormgever/klassieke tools (route B)?
-5. **Voice-over:** eigen stem, professionele stem of AI-stem?
-6. **Distributie:** eigen webpagina/portal, LMS, YouTube/Vimeo, of intern (SharePoint/Teams)?
-7. **Pilot:** akkoord met aflevering 1.2 als pilot, of liever een onderwerp dichter bij jullie dagelijkse praktijk (bijv. 4.3 Precabling)?
-8. **Normkader:** primair EN 50600 (Europees), of ook TIA-942 (internationale klanten)?
+1. **Logo en beeldmateriaal HETS** aanleveren (SVG-logo, eventueel bestaande iconen/foto's).
+2. **Vakinhoudelijke reviewer** aanwijzen die elk script controleert (pipeline stap 3).
+3. **Voice-overpartij** kiezen (bijv. via Voices.com, Voice123 of een lokaal studio); stijl: "calm, confident, technical British/neutral English".
+4. **YouTube-kanaal**: bestaand HETS-kanaal of een apart kanaal voor de serie?
+5. **Spelling**: British English (*centre*, *fibre*) of American English (*center*, *fiber*)? Voorstel: British, past bij Europese normen.
