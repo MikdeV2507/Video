@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Easing, interpolate, Sequence, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Audio, Easing, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {C, F, FPS} from '../../theme';
 import {Camera, P3, lerpCam, toScreen} from '../../iso';
 import {
@@ -531,6 +531,8 @@ export const Ep12: React.FC<Ep12Props> = ({burnCaptions}) => {
   const cue = burnCaptions ? CUES.find((c) => t >= c.start && t < c.end) : undefined;
   return (
     <AbsoluteFill style={{background: C.navy}}>
+      {/* muziekondergrond + geluidseffecten (scripts/make-audio.py); voice-over komt als aparte <Audio> */}
+      <Audio src={staticFile('audio/ep12-bed.wav')} />
       {SCENES.map((s) => {
         const Comp = SCENE_COMPONENTS[s.id];
         return (

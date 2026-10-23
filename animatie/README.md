@@ -31,6 +31,11 @@ Exports komen in `../export/` (staat niet in git).
 Een nieuwe aflevering = een nieuwe map in `src/episodes/` met een `script.ts` en scènes die de
 gedeelde wereld-componenten hergebruiken.
 
+## Muziek en geluidseffecten
+
+`python3 scripts/make-audio.py` genereert `public/audio/ep12-bed.wav` (muziekondergrond + effecten,
+getimed op `script.ts`). Draai het opnieuw na een wijziging in de scène-duur en render daarna opnieuw.
+
 ## Voice-over toevoegen
 
 Zodra de professionele opname er is (WAV per scène, zie stijlgids):

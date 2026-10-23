@@ -79,3 +79,14 @@ vormgever (route B) wordt gemaakt.
 - Tempo ~140 woorden per minuut; pauze van 0,5 s tussen scènes.
 - Aanlevering: WAV 48 kHz/24 bit, droge opname, per scène een apart bestand.
 - Uitspraaklijst per aflevering meesturen (bijv. *CRAH* = "cray", *MPO* = "M-P-O").
+
+## 8. Muziek en geluid
+
+- **Muziekondergrond:** rustige, zelf gegenereerde pad in A-mineur (~76 bpm), laag in de mix zodat de stem altijd boven ligt. Geen samples of stockmuziek, dus geen licentiekosten.
+- **Geluidseffecten**, subtiel en altijd aan een beeldgebeurtenis gekoppeld:
+  - *whoosh* bij camerabewegingen en hoofdstuktitels;
+  - zachte *thud* als een rack of rij geplaatst wordt;
+  - *tick* bij tegels, temperaturen en vinkjes in de checklist;
+  - laag *blip* bij een fout (Don't), heldere *chime* bij de juiste oplossing (Do), de intro en het eindscherm.
+- Mix: piek rond −1,5 dBFS; met voice-over de muziek circa 12 dB onder de stem.
+- Bron: `animatie/scripts/make-audio.py` → `animatie/public/audio/ep12-bed.wav`.
