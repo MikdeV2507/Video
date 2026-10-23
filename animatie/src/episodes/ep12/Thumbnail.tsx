@@ -37,7 +37,7 @@ export const Ep12Thumbnail: React.FC = () => {
           Aisles
         </div>
         <div style={{fontFamily: F.sans, color: '#9FB0C2', fontWeight: 600, fontSize: 30, letterSpacing: 3, marginTop: 40}}>
-          DATA CENTRE
+          DATA CENTER
           <br />
           WHITESPACE
         </div>

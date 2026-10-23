@@ -103,93 +103,69 @@ That way every perforated tile can be placed exactly where it
 is needed — and moved later without cutting the floor.
 
 27
-00:01:54,200 --> 00:01:56,216
-Before you fill the room,
-
-28
-00:01:56,216 --> 00:01:58,635
-reserve the space people need.
-
-29
-00:01:58,635 --> 00:02:03,070
-A front clearance of at least one point two metres lets
-
-30
-00:02:03,070 --> 00:02:05,247
-you install deep equipment;
-
-31
-00:02:05,247 --> 00:02:09,440
-at the rear, keep at least one metre for cabling and
-
-32
-00:02:09,440 --> 00:02:13,875
-service. Leave passages at the ends of rows for egress,
-
-33
-00:02:13,875 --> 00:02:17,343
-and check them against the local fire code.
-
-34
-00:02:21,200 --> 00:02:23,843
+00:01:54,200 --> 00:01:56,843
 Three mistakes we see on site:
 
-35
-00:02:23,843 --> 00:02:28,952
+28
+00:01:56,843 --> 00:02:01,952
 one rack turned the wrong way in an otherwise correct row;
 
-36
-00:02:28,952 --> 00:02:32,739
+29
+00:02:01,952 --> 00:02:05,739
 an open gap in a row where hot air can wrap
 
-37
-00:02:32,739 --> 00:02:37,408
+30
+00:02:05,739 --> 00:02:10,408
 around; and perforated tiles placed in the hot aisle.
 
-38
-00:02:37,408 --> 00:02:40,315
+31
+00:02:10,408 --> 00:02:13,315
 Each one mixes hot and cold air —
 
-39
-00:02:40,315 --> 00:02:43,486
+32
+00:02:13,315 --> 00:02:16,486
 and wastes the cooling you paid for.
 
-40
-00:02:47,800 --> 00:02:50,099
+33
+00:02:20,800 --> 00:02:23,128
 On site, check four things:
 
-41
-00:02:50,099 --> 00:02:52,739
+34
+00:02:23,128 --> 00:02:25,802
 all fronts face the cold aisle;
 
-42
-00:02:52,739 --> 00:02:55,208
+35
+00:02:25,802 --> 00:02:28,303
 rows are aligned to the grid;
 
-43
-00:02:55,208 --> 00:02:57,847
-clearances are free and marked;
+36
+00:02:28,303 --> 00:02:32,097
+perforated tiles sit only in the cold aisle;
 
-44
-00:02:57,847 --> 00:03:00,657
+37
+00:02:32,097 --> 00:02:34,943
 and every gap in a row is closed.
 
-45
-00:03:04,600 --> 00:03:08,831
+38
+00:02:37,600 --> 00:02:42,314
 To recap: alternate your rows into hot and cold aisles.
 
-46
-00:03:08,831 --> 00:03:11,062
+39
+00:02:42,314 --> 00:02:44,800
 Align them to the floor grid.
 
-47
-00:03:11,062 --> 00:03:13,600
-And plan clearances before racks.
+40
+00:02:44,800 --> 00:02:47,629
+And keep hot and cold air apart —
 
-48
-00:03:17,500 --> 00:03:19,846
+41
+00:02:47,629 --> 00:02:50,457
+no wrong-way racks, no open gaps.
+
+42
+00:02:52,500 --> 00:02:54,846
 Next: zones and functions —
 
-49
-00:03:19,846 --> 00:03:23,929
+43
+00:02:54,846 --> 00:02:58,929
 where the MDA, HDA and EDA belong in this room.

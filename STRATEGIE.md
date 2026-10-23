@@ -1,6 +1,6 @@
 # Strategie & plan — Videoserie "Whitespace inrichten in het datacenter"
 
-> Status: **v0.3** — besluiten verwerkt (zie §0). Stijlgids: `huisstijl/STIJLGIDS.md`. Pilot: `curriculum/1.2-rows-and-aisles.md`.
+> Status: **v0.4** — review van 23 okt verwerkt (zie §0 en §10). Stijlgids: `huisstijl/STIJLGIDS.md`. Pilot: `curriculum/1.2-rows-and-aisles.md`.
 > Pilot-animatie v0.1 (zonder voice-over) gebouwd in `animatie/` — zie `animatie/README.md`.
 
 ---
@@ -16,6 +16,10 @@
 | Distributie | **YouTube** — playlist per module |
 | Normen | De gangbare branchestandaarden: EN 50600, ISO/IEC 11801-5 & 14763-2, TIA-942, TIA-568, TIA-606, BICSI 002, ASHRAE TC9.9 |
 | Pilot | **1.2 Rows and aisles** |
+| Spelling | **American English** (*center, fiber, meter*); maten blijven metrisch |
+| Vakinhoudelijke review | **Michael** controleert elk script |
+| Voice-overpartij | **Voices.com** |
+| YouTube-kanaal | **Bestaande HETS-kanaal** |
 | Productieroute | **Advies: hybride, code-gebaseerde pilot eerst** (zie §7) — besluit na de pilot |
 
 ---
@@ -62,19 +66,23 @@ en de logische volgorde van ontwerp → installatie → oplevering uitleggen en 
 De serie volgt de logische volgorde waarin een whitespace wordt ontworpen en ingericht.
 Indeling in **seizoenen/modules**, zodat je met module 1–2 al live kunt gaan.
 
-### Module 0 — Kader (2 afleveringen)
+### Module 0 — Kader (4 afleveringen)
+Eerst een stap terug: wat is een datacenter of computerruimte, voordat we de whitespace in gaan.
+
 | # | Titel | Kern |
 |---|---|---|
-| 0.1 | Wat is whitespace? | Whitespace vs. grey space, ruimtes en functies, rollen in een project |
-| 0.2 | Normen & ontwerpklassen | EN 50600 beschikbaarheidsklassen, Tier-denken, waarom normen de werkwijze sturen |
+| 0.1 | Wat is een datacenter? | Waarvoor een datacenter dient; soorten: enterprise, colocation, hyperscale, edge |
+| 0.2 | Datacenter en computerruimte | Verschil in schaal en eisen; de computer- of serverruimte als kleine variant; welke principes overal gelden |
+| 0.3 | De bouwstenen | Grey space en whitespace; energie, koeling, connectiviteit, beveiliging; rollen in een project |
+| 0.4 | Normen & ontwerpklassen | EN 50600 beschikbaarheidsklassen, Tier-denken, waarom normen de werkwijze sturen |
 
 ### Module 1 — Ruimtelijke indeling (4)
 | # | Titel | Kern |
 |---|---|---|
 | 1.1 | Het grid | Vloerraster (600×600), kolommen, vrije hoogte, vloerbelasting, verhoogde vloer vs. dichte vloer |
-| 1.2 | Rijen en gangpaden | Warme/koude gang, hartafstanden, minimale vrije ruimte voor & achter rack, vluchtwegen |
+| 1.2 | Rijen en gangpaden | Warme/koude gang, uitlijnen op het vloerraster, veelgemaakte fouten |
 | 1.3 | Zones en functies | Entrance room, MDA, HDA/IDA, ZDA, EDA — waar staat wat en waarom |
-| 1.4 | Van eisen naar layout | Capaciteit (kW/rack, aantal racks), groeiscenario's, fasering |
+| 1.4 | Van eisen naar layout | Capaciteit (kW/rack, aantal racks), vrije ruimte rond racks en vluchtroutes, groeiscenario's, fasering |
 
 ### Module 2 — Koeling & luchtstromen (4)
 | # | Titel | Kern |
@@ -122,7 +130,7 @@ Indeling in **seizoenen/modules**, zodat je met module 1–2 al live kunt gaan.
 | 7.3 | Testen & meten | Certificeren koper, OTDR/insertion loss glas, rapportage |
 | 7.4 | Oplevering & change management | As-built, overdracht, werken in een operationele zaal (MOP/MOS) |
 
-**Totaal: ~28 afleveringen.** Plus per module een **samenvattingsvideo** (60–90 s) als trailer/opfrisser.
+**Totaal: 30 afleveringen.** Plus per module een **samenvattingsvideo** (60–90 s) als trailer/opfrisser.
 
 ---
 
@@ -168,7 +176,7 @@ Indeling in **seizoenen/modules**, zodat je met module 1–2 al live kunt gaan.
 | **Bestandsformaat** | Upload MP4 (H.264, 1920×1080, 30 fps, AAC 48 kHz). YouTube zorgt zelf voor adaptieve streaming op pc, iPad en telefoon. |
 | **Afspeelomgeving** | **YouTube**: één kanaal, **playlist per module**, plus een playlist "Full series" in de juiste volgorde. |
 | **Navigatie** | **YouTube-hoofdstukken** via tijdcodes in de beschrijving (Intro, Problem, Principle, Don't/Do, Checklist, Recap). |
-| **Vindbaarheid** | Vaste titelvorm: `Data Centre Whitespace 1.2 — Rows and Aisles | HETS`; vaste thumbnail-template; beschrijving met kernpunten en normverwijzingen. |
+| **Vindbaarheid** | Vaste titelvorm: `Data Center Whitespace 1.2 — Rows and Aisles | HETS`; vaste thumbnail-template; beschrijving met kernpunten en normverwijzingen. |
 | **Shorts** | Per aflevering optioneel één **9:16 Short** (30–45 s, de "Don't / Do") als teaser met link naar de volledige video. |
 | **Eindscherm** | Laatste 10 s: eindscherm met "next episode" en de module-playlist. |
 | **Naslag** | Per aflevering een **1-pagina PDF-kaart** (kernpunten + checklist), te linken in de beschrijving. |
@@ -199,7 +207,7 @@ Per aflevering:
 
 | | Route A — code (Remotion) | Route B — vormgever |
 |---|---|---|
-| Consistentie over ~28 afleveringen | Zeer hoog: één rack-/rij-/kabelcomponent overal | Afhankelijk van discipline van de vormgever |
+| Consistentie over ~30 afleveringen | Zeer hoog: één rack-/rij-/kabelcomponent overal | Afhankelijk van discipline van de vormgever |
 | Wijzigen (nieuwe norm, ander getal) | Waarde aanpassen, opnieuw renderen | Nieuwe opdracht, nieuwe kosten |
 | Kosten per aflevering | Laag na de opbouw van de bibliotheek | Hoger, per aflevering |
 | Uitstraling / "beleving" | Strak, technisch, schematisch | Meer karakter en vloeiende beweging mogelijk |
@@ -243,8 +251,6 @@ De professionele voice-over wordt in beide routes **na scriptgoedkeuring en vó�
 
 ## 10. Open punten
 
-1. **Logo en beeldmateriaal HETS** aanleveren (SVG-logo, eventueel bestaande iconen/foto's).
-2. **Vakinhoudelijke reviewer** aanwijzen die elk script controleert (pipeline stap 3).
-3. **Voice-overpartij** kiezen (bijv. via Voices.com, Voice123 of een lokaal studio); stijl: "calm, confident, technical British/neutral English".
-4. **YouTube-kanaal**: bestaand HETS-kanaal of een apart kanaal voor de serie?
-5. **Spelling**: British English (*centre*, *fibre*) of American English (*center*, *fiber*)? Voorstel: British, past bij Europese normen.
+1. **Officieel HETS-logo** (SVG). Ophalen van hets.nl lukte niet vanuit de cloudomgeving; graag uploaden of de directe URL van het logo doorgeven. Tot die tijd staat er een tijdelijk woordmerk in beeld.
+
+Afgehandeld op 23 okt: reviewer (Michael), voice-over (Voices.com), kanaal (bestaand HETS-kanaal), spelling (American English).

@@ -46,13 +46,6 @@ export const SCENES: Scene[] = [
     voDelay: 1.2,
   },
   {
-    id: 'clearance',
-    dur: 27,
-    chapter: 'Clearances',
-    vo: 'Before you fill the room, reserve the space people need. A front clearance of at least one point two metres lets you install deep equipment; at the rear, keep at least one metre for cabling and service. Leave passages at the ends of rows for egress, and check them against the local fire code.',
-    voDelay: 1.2,
-  },
-  {
     id: 'dontdo',
     dur: 27,
     chapter: "Don't / Do",
@@ -63,14 +56,14 @@ export const SCENES: Scene[] = [
     id: 'checklist',
     dur: 17,
     chapter: 'On-site checklist',
-    vo: 'On site, check four things: all fronts face the cold aisle; rows are aligned to the grid; clearances are free and marked; and every gap in a row is closed.',
+    vo: 'On site, check four things: all fronts face the cold aisle; rows are aligned to the grid; perforated tiles sit only in the cold aisle; and every gap in a row is closed.',
     voDelay: 0.8,
   },
   {
     id: 'recap',
-    dur: 13,
+    dur: 15,
     chapter: 'Recap',
-    vo: 'To recap: alternate your rows into hot and cold aisles. Align them to the floor grid. And plan clearances before racks.',
+    vo: 'To recap: alternate your rows into hot and cold aisles. Align them to the floor grid. And keep hot and cold air apart — no wrong-way racks, no open gaps.',
     voDelay: 0.6,
   },
   {

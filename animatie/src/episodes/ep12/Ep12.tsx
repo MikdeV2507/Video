@@ -110,7 +110,7 @@ const Bumper: React.FC = () => {
           <HetsMark size={90} />
         </div>
         <div style={{marginTop: 60, opacity: b, transform: `translateY(${(1 - b) * 20}px)`, fontFamily: F.sans}}>
-          <div style={{fontSize: 40, fontWeight: 600, color: '#9FB0C2', letterSpacing: 6}}>DATA CENTRE WHITESPACE</div>
+          <div style={{fontSize: 40, fontWeight: 600, color: '#9FB0C2', letterSpacing: 6}}>DATA CENTER WHITESPACE</div>
           <div style={{fontSize: 96, fontWeight: 700, color: C.white, marginTop: 12}}>
             <span style={{fontFamily: F.mono, color: C.orange, marginRight: 32}}>1.2</span>Rows and Aisles
           </div>
@@ -318,44 +318,7 @@ const EdgeHighlight: React.FC<{cam: Camera; y: number[]; opacity: number}> = ({c
 
 const toS = (cam: Camera, p: P3) => toScreen(p, cam);
 
-// ---------- Scène 7: vrije ruimte ----------
-
-const Clearance: React.FC = () => {
-  const t = useSec();
-  const cam = lerpCam({focus: [4.8, 3.0, 0.4], zoom: 2.7, az: 52, el: 62}, {focus: [6.4, 4.0, 0.5], zoom: 2.3, az: 50, el: 52}, ramp(t, 0, 3));
-  const items = [...base(cam)];
-  for (let r = 0; r < 4; r++) items.push(...row(cam, r, CORRECT[r]));
-  // server die uit het laatste rack van rij A naar voren wordt getrokken
-  const pull = ramp(t, 6, 8) * (1 - ramp(t, 13, 14.5));
-  const sx = rackX(7) + 0.05;
-  items.push(box(cam, [sx, 2.4 - 1.0 + pull * 1.0, 1.0], [0.5, 1.0, 0.09], {top: '#8FA3B8', x: '#5F7389', y: '#4C627A'}, {opacity: ramp(t, 5.5, 6)}));
-  const egress = ramp(t, 18, 19.5);
-  const xe = ROW_X1 + 0.6;
-  const dx = ROW_X1 + 0.25;
-  return (
-    <Bg>
-      <World
-        items={items}
-        overlay={
-          <g>
-            <Dim cam={cam} a={[dx, 2.4, 0.02]} b={[dx, 3.6, 0.02]} label="≥ 1.2 m front" color={C.cold} opacity={ramp(t, 3, 4)} />
-            <Dim cam={cam} a={[dx, 4.8, 0.02]} b={[dx, 6.0, 0.02]} label="≥ 1.0 m rear" color={C.hot} opacity={ramp(t, 9.5, 10.5)} />
-            <Dim cam={cam} a={[ROW_X1, 0.6, 0.02]} b={[ROOM.x, 0.6, 0.02]} label="row end" color={C.navy} opacity={ramp(t, 15, 16)} />
-            <g opacity={egress}>
-              <AirStream cam={cam} t={t} color={C.sideB} count={10} speed={1.4} size={1.1} path={[[xe + 0.15, 0.4, 0.05], [xe + 0.15, 10.4, 0.05]]} />
-            </g>
-          </g>
-        }
-      />
-      <Tag cam={cam} at={[sx + 0.25, 2.4, 1.2]} text="deep equipment" size={32} color={C.navy} dx={160} dy={-60} opacity={fadeWin(t, 7, 13.5)} />
-      <Tag cam={cam} at={[xe + 0.15, 4.2, 0.05]} text="egress — check local fire code" size={32} color={C.sideB} dx={240} dy={0} opacity={fadeWin(t, 19, 26.6)} />
-      <Locator label="Clearances" opacity={1} highlight={{x: 6.6, y: 2.4, w: 1.8, h: 3.6}} />
-      <ChapterTitle text="Clearances" start={0.2} dur={3.2} />
-    </Bg>
-  );
-};
-
-// ---------- Scène 8: zo niet / zo wel ----------
+// ---------- Scène 7: zo niet / zo wel ----------
 
 const PANEL_CAM: Camera = {focus: [5.2, 3.4, 0.6], zoom: 2.2, az: 56, el: 55};
 
@@ -481,7 +444,7 @@ const DontDo: React.FC = () => {
   );
 };
 
-// ---------- Scène 9 en 10: checklist en recap ----------
+// ---------- Scène 8 en 9: checklist en recap ----------
 
 const Checklist: React.FC = () => (
   <NavyBg>
@@ -489,7 +452,7 @@ const Checklist: React.FC = () => (
       title="On-site checklist"
       start={2.4}
       step={2.7}
-      items={['All fronts face the cold aisle', 'Rows aligned to the floor grid', 'Clearances free and marked', 'Every gap in a row closed']}
+      items={['All fronts face the cold aisle', 'Rows aligned to the floor grid', 'Perforated tiles only in the cold aisle', 'Every gap in a row closed']}
     />
   </NavyBg>
 );
@@ -501,12 +464,12 @@ const Recap: React.FC = () => (
       numbered
       start={1.4}
       step={2.4}
-      items={['Alternate rows into hot and cold aisles', 'Align rows to the floor grid', 'Plan clearances before racks']}
+      items={['Alternate rows into hot and cold aisles', 'Align rows to the floor grid', 'Keep hot and cold air apart']}
     />
   </NavyBg>
 );
 
-// ---------- Scène 11: vooruitblik en eindscherm ----------
+// ---------- Scène 10: vooruitblik en eindscherm ----------
 
 const Next: React.FC = () => {
   const t = useSec();
@@ -552,7 +515,6 @@ const SCENE_COMPONENTS: Record<string, React.FC> = {
   problem: Problem,
   principle: Principle,
   grid: Grid,
-  clearance: Clearance,
   dontdo: DontDo,
   checklist: Checklist,
   recap: Recap,

@@ -1,4 +1,4 @@
-# Stijlgids — HETS Data Centre Whitespace series
+# Stijlgids — HETS Data Center Whitespace series
 
 Deze gids geldt voor elke aflevering, ongeacht of de animatie in code (route A) of door een
 vormgever (route B) wordt gemaakt.
@@ -67,11 +67,11 @@ vormgever (route B) wordt gemaakt.
 
 ## 6. Taal en toon (Engels)
 
-- **British English** (*centre, fibre, metre*) — tenzij anders besloten.
+- **American English** (*center, fiber, meter*), besloten op 23 okt.
 - Spreek de kijker aan als vakgenoot: "you", actief, kort. Geen marketingtaal.
 - Afkorting bij eerste gebruik uitschrijven in de voice-over én tonen in beeld.
 - Normen noemen als `EN 50600-2-4` / `TIA-942`, niet voorlezen.
-- Getallen altijd metrisch; waar TIA in feet denkt, alleen metrisch noemen.
+- Getallen altijd metrisch (meters, millimeters); waar TIA in feet denkt, alleen metrisch noemen.
 
 ## 7. Voice-over
 
